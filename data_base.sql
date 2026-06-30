@@ -50,3 +50,18 @@ insert into about(code,email,about)
 values (23456,'db0668191@gmail.com','Hello, i am learning sql');
 
 select * from about;
+
+create table random(
+id Serial Primary key, -- us eof primary key helps give me auto genrate number fom 1 to n
+name varchar(100) not null, -- varchar gives you a specific space, and not null helps that the sapece should not be null,
+email char(20) unique not null, -- unique helps that ot should be unique
+create_at date default now(), -- this helps that date and default now give the current date
+age int check (age >=18) -- check helps to pur condition
+);
+
+insert into random (name,age,email)
+values ('Debmalya',20,'db0668191@gmail.com')
+
+select * from random;
+
+
